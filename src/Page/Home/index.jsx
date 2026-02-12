@@ -71,9 +71,9 @@ export default function Home() {
                 draggable
                 pauseOnHover
             />
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center  ">
                 <div className="flex flex-col gap-1 justify-center items-center mt-10 lg:mt-15 max-w-[97%]">
-                    <h1 className="font-bold text-3xl lg:text-4xl text-gray-800">Consulta de Situação Cadastral</h1>
+                    <h1 className="font-bold text-2xl lg:text-4xl text-gray-800">Consulta de Situação Cadastral</h1>
                     <p className="text-gray-500">Verificação rápida para decisão de abertura de cadastro</p>
                 </div>
 
