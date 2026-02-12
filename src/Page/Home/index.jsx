@@ -71,13 +71,13 @@ export default function Home() {
                 draggable
                 pauseOnHover
             />
-            <div className="flex flex-col  max-w-[90%] ">
-                <div className="flex flex-col gap-1  mt-10 lg:mt-15 max-w-[97%]">
+            <div className="mt-15 flex flex-col gap-7 max-w-[95%]">
+                <div className="flex flex-col justify-center items-center">
                     <h1 className="font-bold text-xl lg:text-4xl text-gray-800">Consulta de Situação Cadastral</h1>
                     <p className="text-gray-500 ">Verificação rápida para decisão de abertura de cadastro</p>
                 </div>
 
-                <div className="flex justify-center items-center mt-8 gap-3 max-w-[95%]">
+                <div className=" flex gap-3">
                     <input value={inputCnpj} type="text" ref={inputRef} placeholder="00.000.000/0000-00" className="w-130 outline-none bg-gray-100 p-3 rounded-xl shadow" onChange={((event) => setInputCnpj(event.target.value))} onKeyDown={(event) => { if (event.key === "Enter") { PesquisarCNPJ() } }} />
                     <button onClick={PesquisarCNPJ} className="cursor-pointer shadow hover:bg-blue-500 bg-blue-400 p-3 rounded-xl text-gray-50">Consultar</button>
                 </div>
@@ -108,11 +108,7 @@ export default function Home() {
                                         <p key={item.cnpj}><strong>Razão Social:</strong> {item.razao_social}</p>
                                         <p><strong>Fantasia:</strong> {item.nome_fantasia}</p>
                                         <p><strong>CNPJ:</strong> {item.cnpj}</p>
-
-                                        <div className="flex gap-2">
-                                            <p><strong>Endereço:</strong> {item.logradouro}</p>
-                                            <p><strong>N°</strong> {item.numero}</p>
-                                        </div>
+                                        <p><strong>Endereço:</strong> {item.logradouro} N° {item.numero}</p>
                                         <p><strong>Bairro:</strong> {item.bairro}</p>
                                         <p><strong>CEP:</strong> {item.cep}</p>
                                         <div className="flex gap-2">
