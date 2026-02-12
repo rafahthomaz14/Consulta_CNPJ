@@ -74,10 +74,10 @@ export default function Home() {
             <div className="mt-15 flex flex-col gap-7 max-w-[95%]">
                 <div className="flex flex-col justify-center items-center">
                     <h1 className="font-bold text-xl lg:text-4xl text-gray-800">Consulta de Situação Cadastral</h1>
-                    <p className="text-gray-500 ">Verificação rápida para decisão de abertura de cadastro</p>
+                    <p className="text-gray-500 ">Verificação para decisão de abertura de cadastro</p>
                 </div>
 
-                <div className=" flex gap-3">
+                <div className=" flex gap-2">
                     <input value={inputCnpj} type="text" ref={inputRef} placeholder="00.000.000/0000-00" className="w-130 outline-none bg-gray-100 p-3 rounded-xl shadow" onChange={((event) => setInputCnpj(event.target.value))} onKeyDown={(event) => { if (event.key === "Enter") { PesquisarCNPJ() } }} />
                     <button onClick={PesquisarCNPJ} className="cursor-pointer shadow hover:bg-blue-500 bg-blue-400 p-3 rounded-xl text-gray-50">Consultar</button>
                 </div>
