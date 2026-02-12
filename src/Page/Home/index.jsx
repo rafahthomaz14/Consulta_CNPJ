@@ -20,7 +20,7 @@ export default function Home() {
             setDadosApi([response.data.data]);
             toast.success("CNPJ Localizado com sucesso!");
 
-        } catch (error) {
+        } catch(error) {
             toast.error("Não foi possível consultar o CNPJ Verifique se está correto.");
         }
 
