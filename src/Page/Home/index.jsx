@@ -59,7 +59,7 @@ export default function Home() {
     }
 
     return (
-        <div>
+        <div className="flex justify-center items-center flex-col">
             <ToastContainer
                 position="top-right"
                 autoClose={3000}
@@ -71,38 +71,25 @@ export default function Home() {
                 draggable
                 pauseOnHover
             />
-            <div className="flex flex-col items-center w-full">
-                <div className="flex flex-col items-center text-center mt-10 w-[90%] lg:w-auto max-w-4xl gap-1">
-                    <h1 className="font-bold text-2xl lg:text-4xl text-gray-800">
-                        Consulta de Situação Cadastral
-                    </h1>
-                    <p className="text-gray-500">
-                        Verificação rápida para decisão de abertura de cadastro
-                    </p>
+            <div className="flex flex-col justify-center items-center  max-w-[90%] ">
+                <div className="flex flex-col gap-1 justify-center items-center mt-10 lg:mt-15 max-w-[97%]">
+                    <h1 className="font-bold text-xl lg:text-4xl text-gray-800">Consulta de Situação Cadastral</h1>
+                    <p className="text-gray-500">Verificação rápida para decisão de abertura de cadastro</p>
                 </div>
 
-                <div className="flex flex-col lg:flex-row items-center justify-center mt-8 gap-3 w-[90%] max-w-xl">
-                    <input
-                        ref={inputRef}
-                        value={inputCnpj}
-                        type="text"
-                        placeholder="00.000.000/0000-00"
-                        className="w-full lg:w-[26rem] outline-none bg-gray-100 p-3 rounded-xl shadow"
-                        onChange={(e) => setInputCnpj(e.target.value)}
-                        onKeyDown={(e) => e.key === "Enter" && PesquisarCNPJ()}
-                    />
-
-                    <button onClick={PesquisarCNPJ}className="w-full lg:w-auto cursor-pointer shadow hover:bg-blue-500 bg-blue-400 p-3 rounded-xl text-gray-50">Consultar</button>
+                <div className="flex justify-center items-center mt-8 gap-3 max-w-[95%]">
+                    <input value={inputCnpj} type="text" ref={inputRef} placeholder="00.000.000/0000-00" className="w-130 outline-none bg-gray-100 p-3 rounded-xl shadow" onChange={((event) => setInputCnpj(event.target.value))} onKeyDown={(event) => { if (event.key === "Enter") { PesquisarCNPJ() } }} />
+                    <button onClick={PesquisarCNPJ} className="cursor-pointer shadow hover:bg-blue-500 bg-blue-400 p-3 rounded-xl text-gray-50">Consultar</button>
                 </div>
+
             </div>
-
 
             <div>
                 <div className="flex flex-col justify-center items-center">
                     {DadosApi.length === 0 ? (
-                        <div className="flex py-10 flex-col items-center gap-5 text-gray-400">
+                        <div className="flex py-10 flex-col justify-center items-center gap-5 text-gray-400 ">
                             <FiFolder className="text-6xl" />
-                            <p>Nenhum resultado encontrado. Faça uma pesquisa!</p>
+                            <p>Nenhum resultado encontrado !</p>
                         </div>
                     ) : (
                         DadosApi.map((item) => (
