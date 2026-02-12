@@ -71,10 +71,10 @@ export default function Home() {
                 draggable
                 pauseOnHover
             />
-            <div className="flex flex-col justify-center items-center  max-w-[90%] ">
-                <div className="flex flex-col gap-1 justify-center items-center mt-10 lg:mt-15 max-w-[97%]">
-                    <h1 className="font-bold text-xl lg:text-4xl text-gray-800">Consulta de Situação Cadastral</h1>
-                    <p className="text-gray-500">Verificação rápida para decisão de abertura de cadastro</p>
+            <div className="flex flex-col  max-w-[90%] ">
+                <div className="flex flex-col gap-1  mt-10 lg:mt-15 max-w-[97%]">
+                    <h1 className="font-bold text-2xl lg:text-4xl text-gray-800">Consulta de Situação Cadastral</h1>
+                    <p className="text-gray-500 ">Verificação rápida para decisão de abertura de cadastro</p>
                 </div>
 
                 <div className="flex justify-center items-center mt-8 gap-3 max-w-[95%]">
